@@ -1,0 +1,7 @@
+matplotlib==2.2.3
+numpy==1.11.3
+absl-py
+scipy==1.2.1
+scikit-video==1.1.11
+opencv-python==4.0.0.21
+opendr==0.78
