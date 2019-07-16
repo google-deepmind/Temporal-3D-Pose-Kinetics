@@ -1,6 +1,5 @@
 Exploiting temporal context for 3D human pose estimation in the wild
 ==
- <!--- # Bundle-Adjusted Poses for Kinetics-400 -->
 
 [Exploiting temporal context for 3D human pose estimation in the wild](http://arxiv.org/abs/1905.04266) uses temporal information from videos to correct errors in single-image 3D pose estimation.  In this repository, we provide results from applying this algorithm on the [Kinetics-400](https://deepmind.com/research/open-source/open-source-datasets/kinetics/) dataset.  Note that this is not an exhaustive labeling: at most one person is labeled per frame, and frames which the algorithm has identified as outliers are not labeled.
 
@@ -27,18 +26,19 @@ This [Tensorflow checkpoint](https://storage.cloud.google.com/temporal-3d-pose-k
 
 - You need to install [`youtube-dl`](https://github.com/ytdl-org/youtube-dl) and [`ffmpeg`](http://ffmpeg.org) to download the Kinetics videos to visualise.
 - Download the faces of the SMPL mesh for visualisation: `wget https://github.com/akanazawa/hmr/raw/master/src/tf_smpl/smpl_faces.npy`
-- The python packages needed are in `requirements.txt`. We recommend create a new virtual environment, and running `pip install -r requirements.txt`.
+- Download the Kinetics download script from [ActivityNet](https://github.com/activitynet/ActivityNet/blob/master/Crawler/Kinetics/download.py) and place it in `third_party/activity_net`. This can be done with: `wget https://raw.githubusercontent.com/activitynet/ActivityNet/master/Crawler/Kinetics/download.py -P third_party/activity_net`. We tested with commit 530ac3a of the download script.
+- The python packages needed are in `requirements.txt`. We recommend creating a new virtual environment, and running `pip install -r requirements.txt`.
 
 To run the demo:
 
 `python run_visualise --filename <path_to_downloaded_pickle_file>`
 
 ## Credits
-- The Kinetics download scripts are from [ActivityNet](https://github.com/activitynet/ActivityNet/tree/master/Crawler/Kinetics)
 - The renderer to visualise the SMPL model is from [HMR]( https://github.com/akanazawa/hmr)
+- The Kinetics download script is from [ActivityNet](https://github.com/activitynet/ActivityNet/tree/master/Crawler/Kinetics)
+
 
 ## Reference
-
 If you use this data, please cite
 
 ```tex
