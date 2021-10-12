@@ -3,5 +3,5 @@ numpy==1.11.3
 absl-py
 scipy==1.2.1
 scikit-video==1.1.11
-opencv-python==4.0.0.21
+opencv-python==4.2.0.32
 opendr==0.78
