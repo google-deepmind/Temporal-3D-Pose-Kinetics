@@ -1,5 +1,5 @@
 matplotlib==2.2.3
-numpy==1.11.3
+numpy==1.21.0
 absl-py
 scipy==1.2.1
 scikit-video==1.1.11
